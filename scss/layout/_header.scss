@@ -1,0 +1,62 @@
+@use '../base/variables' as v;
+header {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    z-index: 10;
+
+    .header__button {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 2em .5em;
+        width: 100%;
+
+        .header__button-menu {
+            position: absolute;
+            z-index: 50;
+        }
+
+        a {
+           margin: auto; 
+        }
+    }
+    .header__arrow-button {
+        position: absolute;
+        z-index: 99999;
+        background-color: v.$clr-primary-900;
+        right: 0;
+        bottom: 0;
+        height: 3em;
+        width: 6.2em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around; 
+
+        button {
+            img {
+                height: 1em;
+            }
+        }
+    }
+
+    #menu {
+        background-color: v.$clr-primary-100; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+       .menu-active {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 1em;
+        height: 5em;
+        padding-right: 1em;
+       }
+    }
+}

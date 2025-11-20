@@ -1,0 +1,19 @@
+@use '../base/variables' as v;
+
+h1 {
+    font-weight: v.$fw-700;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: v.$fw-600;
+}
+
+p {
+    font-weight: v.$fw-500;
+}
+
+span {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}

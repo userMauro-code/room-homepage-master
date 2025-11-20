@@ -5,35 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./scss/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Room homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  Home
-  Shop
-  About
-  Contact
+  <header>
+     <picture class="header__content-img">
+      <source srcset="./images/desktop-image-hero-1.jpg" media="min-width:(768px)">
+      <img class="header__img" src="./images/mobile-image-hero-1.jpg" alt="">
+    </picture>
+    <div class="header__button">
+      <button class="header__button-menu" aria-controls="menu" aria-label="open menu" aria-expanded="false"><img class="header__button-imag" src="./images/icon-hamburger.svg" alt=""></button>
+      <a href=""><img src="./images/logo.svg"  alt="Logo Room"></a> 
+      <nav hidden id="menu" class="header__nav">
+        <ul class="header__menu">
+          <li class="header__item"><a class="header__link" href="">Home</a></li>
+          <li class="header__item"><a class="header__link" href="">Shop</a></li>
+          <li class="header__item"><a class="header__link" href="">About</a></li>
+          <li class="header__item"><a class="header__link" href="">Contact</a></li>
+        </ul>
+    </nav>
+    </div>
+    <div class="header__arrow-button">
+      <button><img src="./images/icon-angle-left.svg" alt=""></button>
+      <button><img src="./images/icon-angle-right.svg" alt=""></button>
+    </div>
+    <!-- <img src="./images/desktop-image-hero-1.jpg" alt=""> -->
+  </header>
+  <main>
+    <section class="discover">
+      <h1 class="discover__title">Discover innovative ways to decorate</h1>
+      <p class="discover__text">
+        We provide unmatched quality, comfort, and style for property owners across the country. 
+        Our experts combine form and function in bringing your vision to life. Create a room in your 
+        own style with our collection and make your property a reflection of you and what you love.
+      </p>
+      <span class="discover__span">Shop now</span>
+      <button><img src="./images/icon-arrow.svg" alt=""></button>
+      <img src="./images/image-about-dark.jpg" alt="">
+    </section>
+    <section class="about">
+      <h2 class="about__title">We are available all across the globe</h2>
+      <p class="about__text">
+        With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+        Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+        store locator. Any questions? Don't hesitate to contact us today.
+      </p>
+      <img src="./images/image-about-light.jpg" alt="">
+    </section>
+  </main>
 
-  Discover innovative ways to decorate
-
-  We provide unmatched quality, comfort, and style for property owners across the country. 
-  Our experts combine form and function in bringing your vision to life. Create a room in your 
-  own style with our collection and make your property a reflection of you and what you love.
-
-  Shop now
-
-  We are available all across the globe
-
-  With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-  Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-  store locator. Any questions? Don't hesitate to contact us today.
-
+  
+<!-- 
   Shop now
 
   Manufactured with the best materials
@@ -50,10 +77,7 @@
   Make each room unique, or pick a cohesive theme that best express your interests and what
   inspires you. Find the furniture pieces you need, from traditional to contemporary styles
   or anything in between. Product specialists are available to help you create your dream space.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+   -->
+  <script src="./js/main.js"></script>
 </body>
 </html>

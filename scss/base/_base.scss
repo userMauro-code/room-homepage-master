@@ -1,0 +1,11 @@
+@use '../base/variables' as v;
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: v.$clr-primary-100;
+    font-family: v.$ff-primary;
+    color: v.$clr-primary-500;
+}
