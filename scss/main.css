@@ -72,12 +72,10 @@ button {
 }
 
 header {
-  width: 100%;
-  max-width: 100%;
   position: relative;
   z-index: 10;
 }
-header .header__button {
+header .header__navbar {
   position: absolute;
   top: 0;
   display: flex;
@@ -86,14 +84,22 @@ header .header__button {
   padding: 2em 0.5em;
   width: 100%;
 }
-header .header__button .header__button-menu {
+header .header__navbar .header__button-menu {
   position: absolute;
   z-index: 50;
 }
-header .header__button a {
+header .header__navbar a {
   margin: auto;
 }
-header .header__arrow-button {
+header .header__slider-picture {
+  width: 100%;
+  display: block;
+}
+header .header__slider-picture .header__slider-img {
+  width: 100%;
+  height: auto;
+}
+header .header__slider-controls {
   position: absolute;
   z-index: 99999;
   background-color: hsl(0, 0%, 0%);
@@ -106,21 +112,31 @@ header .header__arrow-button {
   align-items: center;
   justify-content: space-around;
 }
-header .header__arrow-button button img {
+header .header__slider-controls button img {
   height: 1em;
 }
 header #menu {
-  background-color: hsl(0, 0%, 100%);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
-header #menu .menu-active {
+header #menu .header__nav-link {
+  color: hsl(0, 0%, 0%);
+  font-weight: 700;
+}
+header .menu-fuera {
+  transform: translateX(-100%);
+  transition: transform 0.7s ease;
+}
+header .menu-active {
   display: flex;
   align-items: center;
   justify-content: end;
   gap: 1em;
   height: 5em;
   padding-right: 1em;
+  transform: translateX(-100%);
+  background-color: hsl(0, 0%, 100%);
+  transition: transform 0.7s ease;
 }/*# sourceMappingURL=main.css.map */

@@ -1,11 +1,9 @@
 @use '../base/variables' as v;
 header {
-    width: 100%;
-    max-width: 100%;
     position: relative;
     z-index: 10;
 
-    .header__button {
+    .header__navbar {
         position: absolute;
         top: 0;
         display: flex;
@@ -23,7 +21,18 @@ header {
            margin: auto; 
         }
     }
-    .header__arrow-button {
+
+    .header__slider-picture {
+        width: 100%;
+        display: block;
+
+        .header__slider-img{
+           width: 100%;
+           height: auto; 
+        }
+    }
+
+    .header__slider-controls {
         position: absolute;
         z-index: 99999;
         background-color: v.$clr-primary-900;
@@ -44,19 +53,32 @@ header {
     }
 
     #menu {
-        background-color: v.$clr-primary-100; 
+        // display: flex;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         
-       .menu-active {
+        .header__nav-link {
+            color: v.$clr-primary-900;
+            font-weight: v.$fw-700;
+        }
+    }
+
+    .menu-fuera {
+        transform: translateX(-100%);
+        transition: transform .7s ease;
+    }
+
+    .menu-active {
         display: flex;
         align-items: center;
         justify-content: end;
         gap: 1em;
         height: 5em;
         padding-right: 1em;
+        transform: translateX(-100%);
+        background-color: v.$clr-primary-100;
+        transition: transform .7s ease;
        }
-    }
 }

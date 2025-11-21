@@ -1,20 +1,58 @@
 const menu = document.getElementById("menu");
-const headerMenu = document.querySelector(".header__menu");
+const headerMenu = document.querySelector(".header__nav-list");
 const buttonMenu = document.querySelector(".header__button-menu");
-const buttonImage = document.querySelector(".header__button-imag") 
+const buttonImage = document.querySelector(".header__button-menu-icon") 
 
 
 buttonMenu.addEventListener("click", ()=>{
     if(buttonMenu.getAttribute("aria-expanded") === "false"){
         headerMenu.classList.add("menu-active");
-        menu.hidden = false;
+        // menu.hidden = false;
+        menu.setAttribute("aria-hidden", "false");
         buttonMenu.setAttribute("aria-expanded", "true");
         buttonImage.setAttribute("src", "../images/icon-close.svg");
 
     }else{
         headerMenu.classList.remove("menu-active");
-        menu.hidden = true;
+        // menu.hidden = true;
+        menu.setAttribute("aria-hidden", "true");
         buttonMenu.setAttribute("aria-expanded", "false")
         buttonImage.setAttribute("src", "../images/icon-hamburger.svg");
     }
+});
+
+// ---------------------------- galeria
+const sliderLeft = document.querySelector(".header__slider-button--left");
+const sliderRight = document.querySelector(".header__slider-button--right");
+const imgPrincipal = document.querySelector(".header__slider-img");
+
+let imgArray = [
+    "../images/mobile-image-hero-1.jpg",
+    "../images/mobile-image-hero-2.jpg",
+    "../images/mobile-image-hero-3.jpg"
+];
+
+let indiceActual = 0;
+imgPrincipal.src = imgArray[indiceActual];
+
+// --------------------------slider right
+sliderRight.addEventListener("click", ()=> {
+    
+    indiceActual = indiceActual + 1;
+
+    if(indiceActual >= imgArray.length){
+        indiceActual = 0
+    }
+
+    imgPrincipal.src = imgArray[indiceActual];
+});
+
+// ---------------------slider Left
+sliderLeft.addEventListener("click", ()=> {
+    indiceActual = indiceActual - 1;
+
+    if(indiceActual < 0){
+        indiceActual = imgArray.length - 1;
+    }
+    imgPrincipal.src = imgArray[indiceActual]
 });

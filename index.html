@@ -14,27 +14,28 @@
 </head>
 <body>
   <header>
-     <picture class="header__content-img">
-      <source srcset="./images/desktop-image-hero-1.jpg" media="min-width:(768px)">
-      <img class="header__img" src="./images/mobile-image-hero-1.jpg" alt="">
-    </picture>
-    <div class="header__button">
-      <button class="header__button-menu" aria-controls="menu" aria-label="open menu" aria-expanded="false"><img class="header__button-imag" src="./images/icon-hamburger.svg" alt=""></button>
+    <div class="header__navbar">
+      <button class="header__button-menu" aria-controls="menu" aria-label="open menu" aria-expanded="false"><img class="header__button-menu-icon" src="./images/icon-hamburger.svg" alt=""></button>
       <a href=""><img src="./images/logo.svg"  alt="Logo Room"></a> 
-      <nav hidden id="menu" class="header__nav">
-        <ul class="header__menu">
-          <li class="header__item"><a class="header__link" href="">Home</a></li>
-          <li class="header__item"><a class="header__link" href="">Shop</a></li>
-          <li class="header__item"><a class="header__link" href="">About</a></li>
-          <li class="header__item"><a class="header__link" href="">Contact</a></li>
+      <nav  id="menu" class="header__nav" role="navigation">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a class="header__nav-link" href="">Home</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="">Shop</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="">About</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="">Contact</a></li>
         </ul>
     </nav>
     </div>
-    <div class="header__arrow-button">
-      <button><img src="./images/icon-angle-left.svg" alt=""></button>
-      <button><img src="./images/icon-angle-right.svg" alt=""></button>
+    <div class="header__slider">
+      <picture class="header__slider-picture">
+        <source srcset="./images/desktop-image-hero-1.jpg" media="(min-width: 768px)">
+        <img class="header__slider-img" src="./images/mobile-image-hero-1.jpg" alt="Mesa moderna y silla blanca en una sala iluminada">
+      </picture>
+      <div class="header__slider-controls">
+        <button class="header__slider-button--left" aria-label="previous slide"><img src="./images/icon-angle-left.svg" alt=""></button>
+        <button class="header__slider-button--right" aria-label="next slide"><img src="./images/icon-angle-right.svg" alt=""></button>
+      </div>
     </div>
-    <!-- <img src="./images/desktop-image-hero-1.jpg" alt=""> -->
   </header>
   <main>
     <section class="discover">
