@@ -1,23 +1,30 @@
 const menu = document.getElementById("menu");
 const headerMenu = document.querySelector(".header__nav-list");
 const buttonMenu = document.querySelector(".header__button-menu");
-const buttonImage = document.querySelector(".header__button-menu-icon") 
+const buttonImage = document.querySelector(".header__button-menu-icon") ;
+const sombra = document.querySelector(".sombra");
 
 
 buttonMenu.addEventListener("click", ()=>{
     if(buttonMenu.getAttribute("aria-expanded") === "false"){
-        headerMenu.classList.add("menu-active");
-        // menu.hidden = false;
+        headerMenu.classList.add("menu-activo");
+        headerMenu.classList.remove("menu-fuera");
         menu.setAttribute("aria-hidden", "false");
         buttonMenu.setAttribute("aria-expanded", "true");
         buttonImage.setAttribute("src", "../images/icon-close.svg");
+        sombra.classList.add("sombra-activa");
+        sombra.classList.remove("sombra-fuera");
+        document.body.style.overflow = "hidden";
 
     }else{
+        headerMenu.classList.add("menu-fuera");
         headerMenu.classList.remove("menu-active");
-        // menu.hidden = true;
         menu.setAttribute("aria-hidden", "true");
         buttonMenu.setAttribute("aria-expanded", "false")
         buttonImage.setAttribute("src", "../images/icon-hamburger.svg");
+        sombra.classList.add("sombra-fuera");
+        sombra.classList.remove("sombra-activa");
+        document.body.style.overflow = "auto";
     }
 });
 

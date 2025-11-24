@@ -53,32 +53,56 @@ header {
     }
 
     #menu {
-        // display: flex;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
+        z-index: 30;
+        
         
         .header__nav-link {
             color: v.$clr-primary-900;
             font-weight: v.$fw-700;
+            
         }
-    }
-
+        .header__nav-list {
+            transform: translateX(-100%);
+            transition: transform 1s; 
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            flex-direction: row;
+            gap: 1em;
+            height: 5em;
+            padding-right: 1em;
+            background-color: v.$clr-primary-100;
+        }
+         .menu-activo {        
+        transform: translateX(0%);
+        transition: transform .5s ease;
+       }
+    
     .menu-fuera {
         transform: translateX(-100%);
-        transition: transform .7s ease;
+        transition: transform .8s ease-in-out;
+    }
     }
 
-    .menu-active {
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        gap: 1em;
-        height: 5em;
-        padding-right: 1em;
-        transform: translateX(-100%);
-        background-color: v.$clr-primary-100;
-        transition: transform .7s ease;
-       }
+    .sombra{
+        position: fixed;
+        inset: 0;
+        height: 100vh;
+        background-color: transparent;
+  }
+    .sombra-activa {
+        transition: background-color .5s ease;
+        background-color: rgba(0, 0, 0, 0.322);
+    }
+  
+
+    .sombra-fuera {
+        background-color: transparent;
+        transition: background-color .5s ease-in-out;
+    }
+   
 }
