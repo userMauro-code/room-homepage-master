@@ -71,6 +71,59 @@ button {
   background-color: transparent;
 }
 
+main {
+  padding: 2.5em 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+main .discover {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+main .discover .discover__padding {
+  padding: 0 1.5em;
+}
+main .discover .discover__padding .discover__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .discover .discover__padding .discover__description .discover__description-title {
+  color: hsl(0, 0%, 0%);
+}
+main .discover .discover__padding .discover__shop {
+  margin: 1.5em 0 1em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .discover .discover__padding .discover__shop .discover__shop-span {
+  color: hsl(0, 0%, 0%);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+main .about {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+main .about .about__description {
+  padding: 0 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .about .about__description .about__description-title {
+  color: hsl(0, 0%, 0%);
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+}
+main .about .about__description .about__description-text {
+  font-size: 0.875rem;
+}
+
 header {
   position: relative;
   z-index: 10;

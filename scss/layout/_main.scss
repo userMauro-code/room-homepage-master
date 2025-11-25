@@ -1,4 +1,70 @@
-// main {
-//     position: relative;
-//     z-index: 10;
-// }
+@use '../base/variables' as v;
+
+main {
+    padding: 2.5em 0 0 0 ;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    .discover {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        .discover__padding{
+            padding: 0 1.5em;
+            
+            .discover__description {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                
+
+                .discover__description-title {
+                    color: v.$clr-primary-900;
+                }
+            }
+
+            .discover__shop {
+                margin: 1.5em 0 1em 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                
+                .discover__shop-span {
+                    color: v.$clr-primary-900;
+                    font-size: v.$fs-50;
+                    font-weight: v.$fw-600;
+                }
+
+            }
+
+        }
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        .about__description {
+            padding: 0 1.5em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            .about__description-title {
+                color: v.$clr-primary-900;
+                font-size: v.$fs-50;
+                letter-spacing: 2px;
+            }
+
+            .about__description-text {
+                font-size: v.$fs-50;
+            }
+
+        }
+
+    }
+
+}
