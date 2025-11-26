@@ -32,7 +32,7 @@ main {
                 align-items: center;
                 
                 .discover__shop-span {
-                    color: v.$clr-primary-900;
+                    color: v.$clr-primary-500;
                     font-size: v.$fs-50;
                     font-weight: v.$fw-600;
                 }
@@ -60,7 +60,7 @@ main {
             }
 
             .about__description-text {
-                font-size: v.$fs-50;
+                // font-size: v.$fs-50;
             }
 
         }

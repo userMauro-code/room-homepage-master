@@ -100,7 +100,7 @@ main .discover .discover__padding .discover__shop {
   align-items: center;
 }
 main .discover .discover__padding .discover__shop .discover__shop-span {
-  color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 63%);
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -120,10 +120,6 @@ main .about .about__description .about__description-title {
   font-size: 0.875rem;
   letter-spacing: 2px;
 }
-main .about .about__description .about__description-text {
-  font-size: 0.875rem;
-}
-
 header {
   position: relative;
   z-index: 10;
