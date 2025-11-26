@@ -3,6 +3,12 @@ header {
     position: relative;
     z-index: 10;
 
+    @media(min-width: 960px){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
     .header__navbar {
         position: absolute;
         top: 0;
@@ -12,15 +18,31 @@ header {
         padding: 2em .5em;
         width: 100%;
 
+        @media(min-width: 960px){
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
         .header__button-menu {
             position: absolute;
             z-index: 50;
+
+            @media(min-width: 960px){
+                display: none;
+            }
         }
 
         a {
            margin: auto; 
         }
     }
+
+    .header__slider{
+        position: relative;
+        @media(min-width:960px){
+            position: static;
+        }
+    
 
     .header__slider-picture {
         width: 100%;
@@ -45,6 +67,9 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: space-around; 
+        @media (min-width:960px) {
+           right: 44.5%;
+        }
 
         button {
             img {
@@ -52,6 +77,7 @@ header {
             }
         }
     }
+}
 
     #menu {
         position: absolute;
@@ -108,7 +134,49 @@ header {
 
     .fade {
         opacity: 0;
-        transition: opacity .5s ease;
+        transition: opacity .3s ease;
+    }
+
+    .discover {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        margin-top: 2em;
+        @media(min-width: 960px){
+            grid-column: 2/-1;
+            grid-row: 1/2;
+            position: relative;
+        }
+
+        .discover__padding{
+            padding: 0 1.5em;
+            
+            .discover__description {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                
+
+                .discover__description-title {
+                    color: v.$clr-primary-900;
+                }
+            }
+
+            .discover__shop {
+                margin: 1.5em 0 1em 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                
+                .discover__shop-span {
+                    color: v.$clr-primary-500;
+                    font-size: v.$fs-50;
+                    font-weight: v.$fw-600;
+                }
+
+            }
+
+        }
     }
    
 }

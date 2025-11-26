@@ -77,33 +77,6 @@ main {
   flex-direction: column;
   gap: 2em;
 }
-main .discover {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-main .discover .discover__padding {
-  padding: 0 1.5em;
-}
-main .discover .discover__padding .discover__description {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-main .discover .discover__padding .discover__description .discover__description-title {
-  color: hsl(0, 0%, 0%);
-}
-main .discover .discover__padding .discover__shop {
-  margin: 1.5em 0 1em 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-main .discover .discover__padding .discover__shop .discover__shop-span {
-  color: hsl(0, 0%, 63%);
-  font-size: 0.875rem;
-  font-weight: 600;
-}
 main .about {
   display: flex;
   flex-direction: column;
@@ -125,6 +98,12 @@ header {
   position: relative;
   z-index: 10;
 }
+@media (min-width: 960px) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 header .header__navbar {
   position: absolute;
   top: 0;
@@ -134,23 +113,42 @@ header .header__navbar {
   padding: 2em 0.5em;
   width: 100%;
 }
+@media (min-width: 960px) {
+  header .header__navbar {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
 header .header__navbar .header__button-menu {
   position: absolute;
   z-index: 50;
 }
+@media (min-width: 960px) {
+  header .header__navbar .header__button-menu {
+    display: none;
+  }
+}
 header .header__navbar a {
   margin: auto;
 }
-header .header__slider-picture {
+header .header__slider {
+  position: relative;
+}
+@media (min-width: 960px) {
+  header .header__slider {
+    position: static;
+  }
+}
+header .header__slider .header__slider-picture {
   width: 100%;
   display: block;
   background-color: hsl(0, 0%, 63%);
 }
-header .header__slider-picture .header__slider-img {
+header .header__slider .header__slider-picture .header__slider-img {
   width: 100%;
   height: auto;
 }
-header .header__slider-controls {
+header .header__slider .header__slider-controls {
   position: absolute;
   z-index: 99999;
   background-color: hsl(0, 0%, 0%);
@@ -163,7 +161,12 @@ header .header__slider-controls {
   align-items: center;
   justify-content: space-around;
 }
-header .header__slider-controls button img {
+@media (min-width: 960px) {
+  header .header__slider .header__slider-controls {
+    right: 44.5%;
+  }
+}
+header .header__slider .header__slider-controls button img {
   height: 1em;
 }
 header #menu {
@@ -213,5 +216,40 @@ header .sombra-fuera {
 }
 header .fade {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
+}
+header .discover {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 2em;
+}
+@media (min-width: 960px) {
+  header .discover {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    position: relative;
+  }
+}
+header .discover .discover__padding {
+  padding: 0 1.5em;
+}
+header .discover .discover__padding .discover__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+header .discover .discover__padding .discover__description .discover__description-title {
+  color: hsl(0, 0%, 0%);
+}
+header .discover .discover__padding .discover__shop {
+  margin: 1.5em 0 1em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .discover .discover__padding .discover__shop .discover__shop-span {
+  color: hsl(0, 0%, 63%);
+  font-size: 0.875rem;
+  font-weight: 600;
 }/*# sourceMappingURL=main.css.map */
