@@ -6,10 +6,33 @@ main {
     flex-direction: column;
     gap: 2em;
 
+    @media(min-width: 960px){
+        height: auto;
+        width: 100%;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        // margin: auto;
+    }
+
+    img{
+        @media(min-width:960px){
+            // object-fit: contain;
+            display: block;
+            // height: auto;
+            width: 100%;
+        }
+    }
+
     .about {
         display: flex;
         flex-direction: column;
         gap: 2em;
+
+
+        @media(min-width: 960px){
+            margin: auto;
+        }
 
         .about__description {
             padding: 0 1.5em;
